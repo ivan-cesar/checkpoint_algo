@@ -1,0 +1,26 @@
+ALGORITHM somme_element_distincts
+VAR
+    tab : ARRAY_OF INTEGER[5];
+    ta : ARRAY_OF INTEGER[4];
+    res : ARRAY_OF INTEGER[3];
+
+    sum,i,j,k : INTEGER;
+BEGIN
+    tab := {3,1,7,9};
+    ta  := {2,4,1,9,3};
+
+    Write('Print Array :')
+
+    FOR i FROM 0 TO ta.length-1 STEP 1  DO
+    Write(tab[i])
+    IF (tab[i] <> ta[i]) THEN
+        res[] := tab[i];
+        res[] := ta[i];
+        sum = tab[i] + ta[i]
+    END_IF
+    END_FOR
+    Write(sum)
+    FOR k FROM 0 TO res.length-1 STEP 1  DO
+    Write(res[k])
+    END_FOR
+END

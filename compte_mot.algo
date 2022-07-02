@@ -1,0 +1,22 @@
+ALGORITHM compte_mot
+VAR
+   phrase : STRING[];
+   str : STRING[1] := " ";
+   talle,i,nbrMot,nbrCons : INTEGER;
+BEGIN
+   DO
+   Write("Entrez votre phrase");
+   Read(phrase);
+   taille := phrase.length();
+   WHILE (phrase[taille] == ".")
+   FOR i FROM 0 TO phrase.length-1 STEP 1 DO
+       IF (i == str) THEN
+       nbrMot := nbrMot + i;
+       END_IF
+       IF ((i == "a")|| (i == "e") || (i == "o") || (i == "i")) THEN
+       nbrCons := nbrCons + i;
+       END_IF
+   END_FOR
+   Write("La phrase compte ",nbrMot,"mot et ",nbrCons," voyelles")
+  
+END
